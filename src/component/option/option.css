@@ -1,0 +1,28 @@
+#Option{
+    width: 100%;
+    height: 3.54rem;
+}
+#Option>div{
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #cccccc;
+}
+#Option>div>ul{
+    width: auto;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+}
+#Option>div>ul>li{
+    flex:0 0 7.5rem;
+    height: 100%;
+}
+#Option>div>ul>li:nth-of-type(1){
+    background-color: red;
+}
+#Option>div>ul>li:nth-of-type(2){
+    background-color: blue;
+}

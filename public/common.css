@@ -1,0 +1,33 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+html{
+    font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+    height: 100%;
+    width: 100%;
+}
+fieldset, c{ border:none; }
+
+img{display: block;}
+
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+
+ul, ol ,li{ list-style:none; }
+
+body { color:#333; background:#fff;
+    height: 100%;
+    width: 100%;
+}
+
+a { color:#666; text-decoration:none; }
+
+input{
+    padding: 0;
+    border: none;
+}
+*{box-sizing: border-box}
+
+/*清除浮动*/
+.clear{clear:both}
+.App{
+    height: 100%;
+    width: 100%;
+}

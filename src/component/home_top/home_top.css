@@ -1,0 +1,18 @@
+#top{
+    height: 0.89rem;
+    width: 100%;
+    background-image: linear-gradient(90deg,#0af,#0085ff);
+}
+#top>div{
+    padding: 0.2rem 0.28rem 0 0.28rem;
+    width: 100%;
+}
+#top>div>span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.36rem;
+    color: #fff;
+    display: inline-block;
+    width: 60%;
+}

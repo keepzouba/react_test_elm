@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='node_modules/zepto/dist/zepto.js'}></script>
+</head>
+<body>
+<button id="btn1">点击</button>
+<button id="btn2">点击</button>
+<ul>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+
+</ul>
+</body>
+</html>
+<script>
+    let myTabTime = {
+      //延迟的时间戳
+    };
+    HTMLElement.prototype.myTab = function (callback) {
+       this.addEventListener('touchstart',function () {
+           console.log(callback);
+           callback()
+       })
+
+    }
+    console.log(HTMLElement.prototype);
+    let btn1 = document.getElementById('btn1');
+    let btn2 = document.getElementById('btn2');
+
+//    btn2.onclick=function () {
+//        window.style.transition="all 2s"
+//        window.scrollTo(100,500);
+//    }
+//    btn1.myTab(function () {
+//        console.log(11);
+//    })
+    $('#btn1').on('click',function () {
+        console.log(111);
+        window.scrollTop(1000)
+    })
+
+</script>
+<!--<script type="text/javascript">-->
+    <!--if (!HTMLElement.prototype.addTapEvent) {-->
+        <!--HTMLElement.prototype.addTapEvent = function(callback) {-->
+            <!--var tapStartTime = 0,-->
+                <!--tapEndTime = 0,-->
+                <!--tapTime = 500, //tap等待时间，在此事件下松开可触发方法-->
+                <!--tapStartClientX = 0,-->
+                <!--tapStartClientY = 0,-->
+                <!--tapEndClientX = 0,-->
+                <!--tapEndClientY = 0,-->
+                <!--tapScollHeight = 15, //水平或垂直方向移动超过15px测判定为取消（根据chrome浏览器默认的判断取消点击的移动量)-->
+                <!--cancleClick = false;-->
+            <!--this.addEventListener('touchstart', function() {-->
+                <!--console.log("touchstart-&#45;&#45;触发了");-->
+                <!--tapStartTime = event.timeStamp;-->
+                <!--var touch = event.changedTouches[0];-->
+                <!--tapStartClientX = touch.clientX;-->
+                <!--tapStartClientY = touch.clientY;-->
+                <!--cancleClick = false;-->
+            <!--})-->
+            <!--this.addEventListener('touchmove', function() {-->
+                <!--var touch = event.changedTouches[0];-->
+                <!--tapEndClientX = touch.clientX;-->
+                <!--tapEndClientY = touch.clientY;-->
+                <!--if ((Math.abs(tapEndClientX - tapStartClientX) > tapScollHeight) || (Math.abs(tapEndClientY - tapStartClientY) > tapScollHeight)) {-->
+                    <!--cancleClick = true;-->
+                <!--}-->
+            <!--})-->
+            <!--this.addEventListener('touchend', function() {-->
+                <!--console.log("touchend-&#45;&#45;触发了");-->
+                <!--tapEndTime = event.timeStamp;-->
+                <!--if (!cancleClick && (tapEndTime - tapStartTime) <= tapTime) {-->
+                    <!--callback();-->
+                <!--}-->
+            <!--})-->
+        <!--}-->
+    <!--}-->
+    <!--console.log(HTMLElement.prototype);-->
+
+    <!--var ul = document.querySelector('ul');-->
+    <!--for (var i = 1; i <= 20; i++) {-->
+        <!--var li = document.createElement('li');-->
+        <!--li.innerHTML = i;-->
+        <!--li.addTapEvent(function() {-->
+            <!--var x = i;-->
+            <!--return function() {-->
+                <!--alert(x);-->
+            <!--}-->
+        <!--}())-->
+        <!--ul.appendChild(li);-->
+    <!--}-->
+    <!--for (var j = 21; j <= 50; j++) {-->
+        <!--var li = document.createElement('li');-->
+        <!--li.innerHTML = j;-->
+        <!--li.onclick = function() {-->
+            <!--var x = j;-->
+            <!--return function() {-->
+                <!--alert(x);-->
+            <!--}-->
+        <!--}()-->
+        <!--ul.appendChild(li);-->
+    <!--}-->
+<!--</script>-->
